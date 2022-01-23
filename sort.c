@@ -7,9 +7,9 @@ void main()
     printf("now enter the no's you want to be sorted\n");
     for(i=0;i<n;i++)
     {
-        scanf("%d",a[i]);
+        scanf("%d",&a[i]);
     }
-    for(i=0;i<(n-1);i++)
+    for(j=0;j<(n-1);j++)
     {
         position=i;
         for(j=i+1;j<n;j++)
@@ -18,10 +18,10 @@ void main()
             {
                position=j; 
             }
-            if(a[j] !=a[position])
+            if(position!=i)
             {
-                k=a[j];
-                a[j]=a[position];
+                k=a[i];
+                a[i]=a[position];
                 a[position]=k;
             }
         }
